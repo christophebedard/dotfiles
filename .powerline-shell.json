@@ -1,0 +1,17 @@
+{
+  "segments": [
+    "username", 
+    "hostname", 
+    "ssh", 
+    "cwd", 
+    "git", 
+    "jobs", 
+    "root",
+    "exit_code"
+  ],
+  "cwd": {
+    "mode": "flat",
+    "max_depth": 4
+  },
+  "theme": "basic"
+}
