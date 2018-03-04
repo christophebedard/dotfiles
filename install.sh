@@ -8,7 +8,8 @@ sudo apt-get install \
     google-chrome-stable \
     git \
     python-catkin-tools \
-    yakuake
+    yakuake \
+    roboware-studio
 
 sudo pip install \
     powerline-shell
