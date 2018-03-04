@@ -9,6 +9,7 @@ sudo apt-get install \
     git \
     python-catkin-tools \
     yakuake \
+    code \
     roboware-studio
 
 sudo pip install \
