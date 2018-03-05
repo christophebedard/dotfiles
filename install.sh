@@ -15,9 +15,11 @@ sudo apt-get install -y \
     python-catkin-tools \
     yakuake
 
-# git info
-git config --global user.email "$email"
-git config --global user.name "$username"
+# powerline-shell
+sudo pip install \
+    powerline-shell
+sudo apt-get install -y fonts-powerline
+cp .powerline-shell.json ~/
 
 # google-chrome-stable
 mkdir tmp/
@@ -27,15 +29,17 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get -f install -y
 cd ../
 
+# manual installations
+echo -e '\033[0;36mManual installations\033[0m'
 # code
-
+echo -e '\033[0;36mhttps://code.visualstudio.com/download/\033[0m'
 # roboware-studio
+echo -e '\033[0;36mhttp://www.roboware.me/\033[0m'
 
-# powerline-shell
-sudo pip install \
-    powerline-shell
-sudo apt-get install -y fonts-powerline
-cp .powerline-shell.json ~/
+
+# git info
+git config --global user.email "$email"
+git config --global user.name "$username"
 
 
 # ROS
