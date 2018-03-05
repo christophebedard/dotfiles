@@ -5,7 +5,7 @@ email=chrisvolkoff@gmail.com
 username=christophebedard
 
 
-# Install useful packages
+# Install packages
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -28,13 +28,6 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get -f install -y
 cd ../
 
-# manual installations
-echo -e '\033[0;36mManual installations\033[0m'
-# code
-echo -e '\033[0;36mhttps://code.visualstudio.com/download/\033[0m'
-# roboware-studio
-echo -e '\033[0;36mhttp://www.roboware.me/\033[0m'
-
 
 # git info
 git config --global user.email "$email"
@@ -49,6 +42,14 @@ git config --global user.name "$username"
 cat .bashrc >> ~/.bashrc
 # Update ~/.bash_aliases
 cat .bash_aliases >> ~/.bash_aliases
+
+
+# manual installations
+echo -e '\033[0;36mManual installations\033[0m'
+# code
+echo -e '\033[0;36mhttps://code.visualstudio.com/download/\033[0m'
+# roboware-studio
+echo -e '\033[0;36mhttp://www.roboware.me/\033[0m'
 
 
 echo -e '\033[0;32mAll done!\033[0m'
