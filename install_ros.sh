@@ -19,5 +19,6 @@ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt-get install -y python-catkin-tools
 
 echo -e '\033[0;32mROS installation done!\033[0m'

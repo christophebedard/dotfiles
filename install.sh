@@ -12,7 +12,6 @@ sudo apt-get upgrade -y
 sudo apt-get install -y \
     python-pip \
     git \
-    python-catkin-tools \
     yakuake
 
 # powerline-shell
