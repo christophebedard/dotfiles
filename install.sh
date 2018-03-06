@@ -29,6 +29,9 @@ sudo apt-get -f install -y
 cd ../
 
 
+sudo apt-get autoremove -y
+
+
 # git info
 git config --global user.email "$email"
 git config --global user.name "$username"
