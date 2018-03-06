@@ -1,7 +1,10 @@
-# ROS kinetic installation script
+# ROS installation script
 # http://wiki.ros.org/kinetic/Installation/Ubuntu
 
-echo -e '\033[0;36mInstalling ROS kinetic\033[0m'
+distro=kinetic
+
+
+echo -e "\033[0;36mInstalling ROS $distro\033[0m"
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
@@ -10,12 +13,18 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C
 sudo apt-get update
 sudo apt-get upgrade
 
-sudo apt-get install -y ros-kinetic-desktop-full
+if [ $(uname -m) == 'x86_64' ]; then
+    echo -e "\033[0;33mros-$distro-desktop-full\033[0m"
+    sudo apt-get install -y ros-$distro-desktop-full
+else
+    echo -e "\033[0;33mros-$distro-desktop\033[0m"
+    sudo apt-get install -y ros-$distro-desktop
+fi
 
 sudo rosdep init
 rosdep update
 
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/$distro/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
