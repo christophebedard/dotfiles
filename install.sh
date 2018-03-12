@@ -45,7 +45,8 @@ git config --global user.name "$username"
 cat .bashrc >> ~/.bashrc
 # Update ~/.bash_aliases
 cat .bash_aliases >> ~/.bash_aliases
-
+# copy .desktop files to autostart
+rsync -a *.desktop ~/.config/autostart/
 
 # manual installations
 echo -e '\033[0;36mManual installations\033[0m'
