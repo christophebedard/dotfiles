@@ -47,6 +47,8 @@ cat .bashrc >> ~/.bashrc
 cat .bash_aliases >> ~/.bash_aliases
 # copy .desktop files to autostart
 rsync -a *.desktop ~/.config/autostart/
+# copy yakuake config file
+rsync -a yakuakerc ~/.kde/share/config/
 
 # manual installations
 echo -e '\033[0;36mManual installations\033[0m'
