@@ -2,11 +2,19 @@
 
 # ROS installation script
 # http://wiki.ros.org/kinetic/Installation/Ubuntu
+# http://wiki.ros.org/melodic/Installation/Ubuntu
 
-distro=kinetic
+# figure out ROS distro
+ubuntu_distro=$(lsb_release -sc)
+ros_distro=kinetic # default
+if [ "$ubuntu_distro" = "xenial" ]; then
+    ros_distro=kinetic
+    echo $ros_distro
+elif [ "$ubuntu_distro" = "bionic" ]; then
+    ros_distro=melodic
+fi
 
-
-echo -e "\033[0;36mInstalling ROS $distro\033[0m"
+echo -e "\033[0;36mInstalling ROS $ros_distro\033[0m"
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
@@ -16,17 +24,17 @@ sudo apt-get update
 sudo apt-get upgrade
 
 if [ $(uname -m) == 'x86_64' ]; then
-    echo -e "\033[0;33mros-$distro-desktop-full\033[0m"
-    sudo apt-get install -y ros-$distro-desktop-full
+    echo -e "\033[0;33mros-$ros_distro-desktop-full\033[0m"
+    sudo apt-get install -y ros-$ros_distro-desktop-full
 else
-    echo -e "\033[0;33mros-$distro-desktop\033[0m"
-    sudo apt-get install -y ros-$distro-desktop
+    echo -e "\033[0;33mros-$ros_distro-desktop\033[0m"
+    sudo apt-get install -y ros-$ros_distro-desktop
 fi
 
 sudo rosdep init
 rosdep update
 
-echo "source /opt/ros/$distro/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/$ros_distro/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
