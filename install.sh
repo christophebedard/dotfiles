@@ -14,6 +14,10 @@ sudo apt-get install -y \
     git \
     yakuake
 
+# run yakuake so that it creates 
+# the config folders
+yakuake &
+
 # powerline-shell
 sudo pip install \
     powerline-shell
