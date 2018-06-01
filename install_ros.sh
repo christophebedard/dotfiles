@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # ROS installation script
 # http://wiki.ros.org/kinetic/Installation/Ubuntu
 
