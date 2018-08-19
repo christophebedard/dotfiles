@@ -2,7 +2,7 @@
 
 # info
 email=bedard.christophe@gmail.com
-username=christophebedard
+username="Christophe Bedard"
 
 
 # Install packages
