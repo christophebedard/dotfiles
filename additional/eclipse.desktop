@@ -2,8 +2,8 @@
 Type=Application
 Name=Eclipse
 Comment=Eclipse Integrated Development Environment
-Icon=/home/chris/eclipse/committers-photon/eclipse/icon.xpm
-Exec=/home/chris/eclipse/committers-photon/eclipse/eclipse
+Icon=/home/chris/eclipse/committers-2018-09/eclipse/icon.xpm
+Exec=/home/chris/eclipse/committers-2018-09/eclipse/eclipse
 Terminal=false
 Categories=Development;IDE;Java;
 StartupWMClass=Eclipse
