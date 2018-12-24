@@ -59,8 +59,6 @@ rsync -a yakuakerc ~/.kde/share/config/
 echo -e '\033[0;36mManual installations\033[0m'
 # code
 echo -e '\033[0;36mhttps://code.visualstudio.com/download/\033[0m'
-# roboware-studio
-echo -e '\033[0;36mhttp://www.roboware.me/\033[0m'
 
 
 echo -e '\033[0;32mAll done!\033[0m'
