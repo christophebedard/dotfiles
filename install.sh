@@ -12,6 +12,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y \
     python-pip \
     git \
+    htop \
     yakuake
 
 # run yakuake so that it creates 
