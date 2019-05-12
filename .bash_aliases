@@ -7,6 +7,7 @@ alias l='ls -CF'
 # aliases
 alias clc='clear'
 alias srcme='source devel/setup.bash'
+alias srcme2='. ./install/local_setup.bash'
 alias f='nautilus .' # assuming nautilus (ubuntu) is the file explorer (thunar for xubuntu)
 alias onedrivelogs='journalctl --user-unit onedrive -f'
 alias onedriverestart='systemctl --user restart onedrive.service'
