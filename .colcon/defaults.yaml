@@ -1,0 +1,11 @@
+{
+  "build": {
+    "symlink-install": true,
+    "cmake-args": [
+      "-DCMAKE_C_FLAGS='-finstrument-functions -fplugin=/home/chris/instrument-attribute-gcc-plugin/instrument_attribute.so -fplugin-arg-instrument_attribute-debug'",
+      "-DCMAKE_CXX_FLAGS='-finstrument-functions -fplugin=/home/chris/instrument-attribute-gcc-plugin/instrument_attribute.so -fplugin-arg-instrument_attribute-debug'",
+      "-DCMAKE_C_COMPILER_LAUNCHER=ccache",
+      "-DCMAKE_CXX_COMPILER_LAUNCHER=ccache",
+    ],
+  },
+}
