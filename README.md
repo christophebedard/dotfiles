@@ -15,5 +15,6 @@ $ ./install.sh
 * VS Code https://code.visualstudio.com/download
 * GitKraken https://www.gitkraken.com/download
 * Spotify https://www.spotify.com/download/linux/
+* OneDrive https://github.com/abraunegg/onedrive
 * Slack
 * Discord
