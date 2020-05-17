@@ -18,3 +18,6 @@ alias f='nautilus .' # assuming nautilus (ubuntu) is the file explorer
 
 alias onedrivelogs='journalctl --user-unit onedrive -f'
 alias onedriverestart='systemctl --user restart onedrive.service'
+
+alias cd-largestorage='cd /media/chris/largestorage'
+alias cd-raid1vol='cd /media/chris/raid1vol'
