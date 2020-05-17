@@ -12,7 +12,7 @@ ROS2_DISTRO=foxy
 alias srcros1='source /opt/ros/${ROS1_DISTRO}/setup.bash'
 alias srcros2='source /opt/ros/${ROS2_DISTRO}/setup.bash'
 alias srcme='source devel/setup.bash'
-alias srcme2='source install/local_setup.bash'
+alias srcme2='source install/setup.bash'
 
 alias f='nautilus .' # assuming nautilus (ubuntu) is the file explorer
 

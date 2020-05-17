@@ -10,7 +10,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 sudo apt-get install -y \
-    python-pip \
+    python3-pip \
     git \
     htop \
     yakuake
@@ -20,19 +20,10 @@ sudo apt-get install -y \
 yakuake &
 
 # powerline-shell
-sudo pip install \
+sudo pip3 install \
     powerline-shell
 sudo apt-get install -y fonts-powerline
-cp .powerline-shell.json ~/
-
-# google-chrome-stable
-mkdir tmp/
-cd tmp/
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt-get -f install -y
-cd ../
-rm -rf tmp/
+rsync -a config/.powerline-shell.json ~/
 
 
 sudo apt-get autoremove -y
@@ -43,23 +34,14 @@ git config --global user.email "$email"
 git config --global user.name "$username"
 
 
-# ROS
-. ./install_ros.sh
-
-
-# Update ~/.bashrc
-cat .bashrc >> ~/.bashrc
 # Update ~/.bash_aliases
 cat .bash_aliases >> ~/.bash_aliases
-# copy .desktop files to autostart
-rsync -a *.desktop ~/.config/autostart/
-# copy yakuake config file
-rsync -a yakuakerc ~/.kde/share/config/
+# Update ~/.bashrc
+cat .bashrc >> ~/.bashrc
 
-# manual installations
-echo -e '\033[0;36mManual installations\033[0m'
-# code
-echo -e '\033[0;36mhttps://code.visualstudio.com/download/\033[0m'
-
+# Config files
+rsync -a --include=*.desktop --exclude=other desktop/ ~/.config/autostart/
+rsync -a config/yakuakerc ~/.kde/share/config/
+#rsync -a config/other/eclipse.desktop ~/.local/share/applications/
 
 echo -e '\033[0;32mAll done!\033[0m'
