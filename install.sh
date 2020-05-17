@@ -13,10 +13,10 @@ sudo apt-get install -y \
     python3-pip \
     git \
     htop \
-    yakuake
+    yakuake \
+    gnome-tweaks
 
-# run yakuake so that it creates 
-# the config folders
+# Run yakuake so that it creates the config folders
 yakuake &
 
 # powerline-shell
@@ -29,7 +29,7 @@ rsync -a config/.powerline-shell.json ~/
 sudo apt-get autoremove -y
 
 
-# git info
+# Set git info
 git config --global user.email "$email"
 git config --global user.name "$username"
 
