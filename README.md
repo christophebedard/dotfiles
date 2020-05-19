@@ -16,5 +16,6 @@ $ ./install.sh
 * GitKraken https://www.gitkraken.com/download
 * Spotify https://www.spotify.com/download/linux/
 * OneDrive https://github.com/abraunegg/onedrive
+* Zotero https://www.zotero.org/download/
 * Slack
 * Discord
