@@ -17,5 +17,6 @@ $ ./install.sh
 * Spotify https://www.spotify.com/download/linux/
 * OneDrive https://github.com/abraunegg/onedrive
 * Zotero https://www.zotero.org/download/
+* TeXstudio: https://www.texstudio.org/#download
 * Slack
 * Discord
