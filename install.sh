@@ -42,6 +42,8 @@ cat .bashrc >> ~/.bashrc
 # Config files
 rsync -a --include=*.desktop --exclude=other desktop/ ~/.config/autostart/
 rsync -a config/yakuakerc ~/.kde/share/config/
+rsync -a config/onedrive_config ~/.config/onedrive/
+rsync -a .colcon/defaults.yaml ~/.colcon/
 #rsync -a config/other/eclipse.desktop ~/.local/share/applications/
 
 echo -e '\033[0;32mAll done!\033[0m'
