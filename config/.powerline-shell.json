@@ -1,11 +1,11 @@
 {
   "segments": [
-    "username", 
-    "hostname", 
-    "ssh", 
-    "cwd", 
-    "git", 
-    "jobs", 
+    "username",
+    "hostname",
+    "ssh",
+    "cwd",
+    "git",
+    "jobs",
     "root",
     "exit_code"
   ],
