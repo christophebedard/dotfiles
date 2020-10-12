@@ -5,6 +5,7 @@
     "ssh",
     "cwd",
     "git",
+    "git_stash",
     "jobs",
     "root",
     "exit_code"
