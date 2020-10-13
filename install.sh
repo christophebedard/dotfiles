@@ -34,6 +34,12 @@ git config --global user.email "$email"
 git config --global user.name "$username"
 
 
+# Create and setup SSH key
+ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -q -N ""
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+
 # Update ~/.bash_aliases
 cat .bash_aliases >> ~/.bash_aliases
 # Update ~/.bashrc
