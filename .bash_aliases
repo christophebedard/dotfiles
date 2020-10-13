@@ -22,3 +22,5 @@ alias onedriverestart='systemctl --user restart onedrive.service'
 alias cd-largestorage='cd /media/chris/largestorage'
 alias cd-raid1vol='cd /media/chris/raid1vol'
 alias cd-secondaryssd='cd /media/chris/secondaryssd'
+
+alias ssh-server='ssh chris@server -p 1234'

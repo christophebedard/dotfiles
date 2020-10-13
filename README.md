@@ -23,6 +23,12 @@ $ ./install.sh
 
 ## Other
 
+### Add SSH key to local server
+
+```shell
+$ ssh-copy-id chris@server -p 1234
+```
+
 ### Set shortcuts to play/pause music
 
 1. Select Settings -> Keyboard Shortcuts
