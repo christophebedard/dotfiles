@@ -32,7 +32,8 @@ sudo apt-get autoremove -y
 # Set git info
 git config --global user.email "$email"
 git config --global user.name "$username"
-
+echo "Signed-off-by: $username <$email>" > ~/.config/.gittemplate
+git config --global commit.template ~/.config/.gittemplate
 
 # Create and setup SSH key
 ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -q -N ""
