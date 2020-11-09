@@ -24,3 +24,5 @@ alias cd-raid1vol='cd /media/chris/raid1vol'
 alias cd-secondaryssd='cd /media/chris/secondaryssd'
 
 alias ssh-server='ssh chris@server -p 1234'
+alias docker-clean='docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)'
+
