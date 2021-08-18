@@ -7,7 +7,7 @@ alias l='ls -CF'
 # custom aliases
 alias clc='clear'
 
-ROS1_DISTRO=melodic
+ROS1_DISTRO=noetic
 ROS2_DISTRO=foxy
 alias srcros1='source /opt/ros/${ROS1_DISTRO}/setup.bash'
 alias srcros2='source /opt/ros/${ROS2_DISTRO}/setup.bash'
