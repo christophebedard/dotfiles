@@ -40,3 +40,12 @@ $ ssh-copy-id chris@server -p 1234
 1. Press the Pause/Break key
 1. Click Close
 1. Listen to music in Spotify and press the Pause/Break key to pause or play the music.
+
+### Configure Apple keyboard on Ubuntu
+
+Configure it to disable FN keys and to swap option and command keys.
+
+```shell
+$ cp config/hid_apple.conf /etc/modprobe.d/
+$ sudo update-initramfs -u
+```
