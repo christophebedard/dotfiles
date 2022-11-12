@@ -29,12 +29,6 @@ rsync -a config/.powerline-shell.json ~/
 sudo apt-get autoremove -y
 
 
-# Set git info
-git config --global user.email "$email"
-git config --global user.name "$username"
-echo -en "\n\nSigned-off-by: $username <$email>" > ~/.config/.gittemplate
-git config --global commit.template ~/.config/.gittemplate
-
 # Create and setup SSH key
 ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -q -N ""
 eval "$(ssh-agent -s)"
@@ -48,10 +42,17 @@ cat .bashrc >> ~/.bashrc
 
 # Config files
 rsync -a --include=*.desktop --exclude=other desktop/ ~/.config/autostart/
+rsync -a config/.gitconfig ~/
 rsync -a config/yakuakerc ~/.kde/share/config/
 rsync -a config/onedrive_config ~/.config/onedrive/
 rsync -a config/vscode_settings.json ~/.config/Code/User/settings.json
 rsync -a .colcon/defaults.yaml ~/.colcon/
 #rsync -a config/other/eclipse.desktop ~/.local/share/applications/
+
+# Set git info
+git config --global user.email "$email"
+git config --global user.name "$username"
+echo -en "\n\nSigned-off-by: $username <$email>" > ~/.config/.gittemplate
+git config --global commit.template ~/.config/.gittemplate
 
 echo -e '\033[0;32mAll done!\033[0m'
