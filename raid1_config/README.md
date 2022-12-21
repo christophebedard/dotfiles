@@ -8,7 +8,7 @@ From blank/empty drives, follow [this](https://www.digitalocean.com/community/tu
 
 ## Re-configuration
 
-If the array has already been created (and the disks mirrored) and needs to be re-configured (e.g. after a new install), follow steps in sub-section _Saving the Array Layout_:
+If the array has already been created (and the disks mirrored) and needs to be re-configured, follow steps in sub-section _Saving the Array Layout_:
 
 1. Save the array config by adding this to `/etc/mdadm/mdadm.conf` (see [`mdadm.conf`](./mdadm.conf)):
 
@@ -28,4 +28,12 @@ sudo update-initramfs -u
 ```
 # raid1 volume
 /dev/md0 /media/chris/raid1vol ext4 defaults,nofail,discard 0 0
+```
+
+## Loading after an OS reinstall
+
+After reinstalling Ubuntu, simply run the script and the array should be detected and mounted right away:
+
+```
+./setup_raid1vol.sh
 ```
