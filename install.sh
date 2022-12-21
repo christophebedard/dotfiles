@@ -44,7 +44,7 @@ cat .bashrc >> ~/.bashrc
 rsync -a --include=*.desktop --exclude=other desktop/ ~/.config/autostart/
 rsync -a config/.gitconfig ~/
 rsync -a config/yakuakerc ~/.kde/share/config/
-rsync -a config/onedrive_config ~/.config/onedrive/
+#rsync -a config/onedrive_config ~/.config/onedrive/
 rsync -a config/vscode_settings.json ~/.config/Code/User/settings.json
 rsync -a .colcon/defaults.yaml ~/.colcon/
 #rsync -a config/other/eclipse.desktop ~/.local/share/applications/
