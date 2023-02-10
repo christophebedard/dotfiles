@@ -8,11 +8,11 @@ alias l='ls -CF'
 alias clc='clear'
 
 ROS1_DISTRO=noetic
-ROS2_DISTRO=galactic
+ROS2_DISTRO=rolling
 alias srcros1='source /opt/ros/${ROS1_DISTRO}/setup.bash'
 alias srcros2='source /opt/ros/${ROS2_DISTRO}/setup.bash'
-alias srcme='source devel/setup.bash'
-alias srcme2='source install/setup.bash'
+alias srcme1='source devel/setup.bash'
+alias srcme='source install/setup.bash'
 
 alias f='nautilus .' # assuming nautilus (ubuntu) is the file explorer
 
