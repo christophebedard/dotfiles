@@ -13,11 +13,11 @@ sudo apt-get install -y \
     python3-pip \
     git \
     htop \
-    yakuake \
+    guake \
     gnome-tweaks
 
-# Run yakuake so that it creates the config folders
-yakuake &
+# Initial launch of guake
+guake &
 
 # powerline-shell
 sudo pip3 install \
@@ -29,10 +29,10 @@ rsync -a config/.powerline-shell.json ~/
 sudo apt-get autoremove -y
 
 
-# Create and setup SSH key
-ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -q -N ""
+# Create and set up SSH key
+ssh-keygen -t ed25519 -C "$email" -f ~/.ssh/id_ed25519 -q -N ""
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 
 
 # Update ~/.bash_aliases
@@ -43,11 +43,11 @@ cat .bashrc >> ~/.bashrc
 # Config files
 rsync -a --include=*.desktop --exclude=other desktop/ ~/.config/autostart/
 rsync -a config/.gitconfig ~/
-rsync -a config/yakuakerc ~/.config/
 #rsync -a config/onedrive_config ~/.config/onedrive/
 rsync -a config/vscode_settings.json ~/.config/Code/User/settings.json
 rsync -a .colcon/defaults.yaml ~/.colcon/
 #rsync -a config/other/eclipse.desktop ~/.local/share/applications/
+guake --restore-preferences config/guake.cfg
 
 # Set git info
 git config --global user.email "$email"

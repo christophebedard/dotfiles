@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Eclipse
-Comment=Eclipse Integrated Development Environment
-Icon=/home/chris/eclipse/committers-2019-12/eclipse/icon.xpm
-Exec=/home/chris/eclipse/committers-2019-12/eclipse/eclipse
-Terminal=false
-Categories=Development;IDE;Java;
-StartupWMClass=Eclipse

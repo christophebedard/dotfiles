@@ -13,5 +13,6 @@
         "build/": true,
         "install/": true,
         "log/": true
-    }
+    },
+    "editor.renderWhitespace": "boundary"
 }

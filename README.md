@@ -11,15 +11,16 @@ $ ./install.sh
 ## Software list
 
 * Chrome https://www.google.com/chrome/
-* KeePass https://keepass.info/download.html
+* KeePassXC https://keepassxc.org/download/#linux
+
+    ```shell
+    $ sudo apt install keepassxc
+    ```
+
 * VS Code https://code.visualstudio.com/download
-* GitKraken https://www.gitkraken.com/download
 * Spotify https://www.spotify.com/download/linux/
 * OneDrive https://github.com/abraunegg/onedrive
-* Zotero https://www.zotero.org/download/
 * TeXstudio: https://www.texstudio.org/#download
-* Slack
-* Discord
 
 ## Other
 
